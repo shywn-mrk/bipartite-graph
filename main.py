@@ -5,7 +5,7 @@ class Graph():
         self.V = V 
         self.graph = [[0 for column in range(V)] for row in range(V)]
 
-    def isBipartite(self, src): 
+    def is_bipartite(self, src): 
         colorArr = [-1] * self.V 
 
         colorArr[src] = 1
@@ -51,4 +51,4 @@ g = Graph(graph_size)
 
 g.graph = random_adjacency_matrix(graph_size)
 
-print("Yes") if g.isBipartite(0) else print("No")
+print("Yes") if g.is_bipartite(0) else print("No")
